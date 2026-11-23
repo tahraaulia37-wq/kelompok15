@@ -8,7 +8,7 @@ Aplikasi web berbasis *Machine Learning* untuk mendeteksi tingkat risiko insomni
 
 ## 👥 Anggota Kelompok 15
 * **Tahra Aulia** – J0404241063
-* **Fakhriyatullahi Zahwa Khaerunnisa	– J0404241147
+* **Fakhriyatullahi Zahwa Khaerunnisa**	– J0404241147
 * **Muhammad Bahrain Sekai Suryawi** – J0404241171
 
 ---
