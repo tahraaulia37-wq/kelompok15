@@ -81,7 +81,7 @@ with col_input:
                 gender = st.selectbox("Jenis Kelamin", ["Male", "Female", "Other"])
                 occupation = st.selectbox(
                     "Pekerjaan", 
-                    ["Student", "Engineer", "Doctor", "Teacher", "Artist", "Manager", "Other"]
+                    ["Student", "Software Engineer", "Doctor", "Teacher", "Designer", "Manager", "Freelancer", "Researcher"]
                 )
             with c2:
                 caffeine_cups = st.number_input("Konsumsi Kafein (Cangkir/Hari)", min_value=0, max_value=15, value=1)
@@ -177,7 +177,7 @@ with col_result:
         idx_low = classes.index('Low')
 
         # Prioritaskan High hanya jika probabilitasnya >= 0.40 DAN lebih besar dari Low
-        if pred_proba[idx_high] >= 0.40 and pred_proba[idx_high] > pred_proba[idx_low]:
+        if pred_proba[idx_high] >= 0.30 and pred_proba[idx_high] > pred_proba[idx_low]:
             pred_label = 'High'
         # Prioritaskan Moderate jika probabilitasnya >= 0.30 dan High tidak mendominasi
         elif pred_proba[idx_mod] >= 0.31 and pred_proba[idx_low] < 0.55:
