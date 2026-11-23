@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
+import os
 
 # 1. Konfigurasi Halaman Utama
 st.set_page_config(
@@ -32,9 +33,10 @@ st.markdown("""
 # 2. Load Model & Assets
 @st.cache_resource
 def load_assets():
-    model = joblib.load('model_insomnia_xgb.pkl')
-    preprocessor = joblib.load('preprocessor.pkl')
-    label_encoder = joblib.load('label_encoder.pkl')
+   base_dir = os.path.dirname(os.path.abspath(__file__))
+    model = joblib.load(os.path.join(base_dir, 'model_insomnia_xgb.pkl'))
+    preprocessor = joblib.load(os.path.join(base_dir, 'preprocessor.pkl'))
+    label_encoder = joblib.load(os.path.join(base_dir, 'label_encoder.pkl'))
     return model, preprocessor, label_encoder
 
 model, preprocessor, label_encoder = load_assets()
