@@ -33,7 +33,7 @@ st.markdown("""
 # 2. Load Model & Assets
 @st.cache_resource
 def load_assets():
-   base_dir = os.path.dirname(os.path.abspath(__file__))
+    base_dir = os.path.dirname(os.path.abspath(__file__))
     model = joblib.load(os.path.join(base_dir, 'model_insomnia_xgb.pkl'))
     preprocessor = joblib.load(os.path.join(base_dir, 'preprocessor.pkl'))
     label_encoder = joblib.load(os.path.join(base_dir, 'label_encoder.pkl'))
