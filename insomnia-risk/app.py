@@ -176,7 +176,7 @@ with col_result:
         idx_mod = classes.index('Moderate')
         idx_low = classes.index('Low')
 
-        # Prioritaskan High hanya jika probabilitasnya >= 0.40 DAN lebih besar dari Low
+        # Prioritaskan High hanya jika probabilitasnya >= 0.30 DAN lebih besar dari Low
         if pred_proba[idx_high] >= 0.30 and pred_proba[idx_high] > pred_proba[idx_low]:
             pred_label = 'High'
         # Prioritaskan Moderate jika probabilitasnya >= 0.30 dan High tidak mendominasi
